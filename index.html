@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>To Do List App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="java\css\style.css">
+</head>
+<body>
+    <div class="container" id="main-container">
+        <img src="Mefmera Logo.png" alt="Logo" class="logo">
+        <h1>To Do List</h1>
+        <form id="todo-form" autocomplete="off">
+            <input type="text" id="todo-input" placeholder="Add a new to do" required>
+            <input type="date" id="date-input" required>
+            <input type="time" id="hour-input" required>
+            <button type="submit" class="blue-btn">Add To Do</button>
+        </form>
+        <div class="action-row">
+            <button id="filter-btn" class="blue-btn">Filter</button>
+            <button id="delete-all" class="red-btn">Delete All</button>
+        </div>
+        <div id="todo-list">
+            <!-- List of added to do will appear here -->
+        </div>
+    </div>
+    <!-- Filter Popup -->
+    <div class="popup-bg" id="filter-popup-bg">
+        <div class="popup">
+            <label for="popup-filter-input">Filter by text</label>
+            <input type="text" id="popup-filter-input" placeholder="Type to filter...">
+            <label for="popup-filter-date">Filter by date</label>
+            <input type="date" id="popup-filter-date">
+            <label for="popup-filter-hour">Filter by hour</label>
+            <input type="time" id="popup-filter-hour">
+            <div class="popup-actions">
+                <button id="popup-clear" class="red-btn" type="button">Clear</button>
+                <button id="popup-apply" class="blue-btn" type="button">Apply</button>
+                <button id="popup-close" type="button">Close</button>
+            </div>
+        </div>
+    </div>
+    <!-- Confirm Delete Popup -->
+    <div class="confirm-bg" id="confirm-bg">
+        <div class="confirm-box">
+            <span id="confirm-text">Are you sure you want to delete this to-do?</span>
+            <div class="confirm-actions">
+                <button id="confirm-yes" class="red-btn" type="button">Yes</button>
+                <button id="confirm-no" class="blue-btn" type="button">No</button>
+            </div>
+        </div>
+    </div>
+    <footer>@2025</footer>
+    <script src="java\java\script.js"></script>
+</body>
+</html>
